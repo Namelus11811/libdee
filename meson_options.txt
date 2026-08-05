@@ -1,0 +1,54 @@
+option(
+  'pygi_overrides_dir',
+  type: 'string',
+  value: '',
+  description: 'PyGObject override directory'
+)
+
+option(
+  'maintainer-flags',
+  type: 'boolean',
+  value: false
+)
+
+option(
+  'tests',
+  type: 'boolean',
+  value: true
+)
+
+option(
+  'extended-tests',
+  type: 'boolean',
+  value: false
+)
+
+option(
+  'trace-log',
+  type:'boolean',
+  value:false
+)
+
+option(
+  'icu',
+  type:'boolean',
+  value:true
+)
+
+option(
+  'docs',
+  type: 'boolean',
+  value: true,
+)
+
+option(
+  'introspection',
+  type: 'feature',
+  value: 'auto',
+)
+
+option(
+  'coverage',
+  type: 'boolean',
+  value: 'false'
+)

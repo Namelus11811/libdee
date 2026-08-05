@@ -13,7 +13,7 @@ m4_define([dee_version],
 
 AC_INIT([dee],[dee_version],[https://bugs.launchpad.net/dee])
 AC_CONFIG_SRCDIR([src/dee.h])
-AC_CONFIG_MACRO_DIR([build/autotools])
+AC_CONFIG_MACRO_DIR([m4/autotools])
 
 AC_CONFIG_HEADERS([config.h])
 
@@ -160,7 +160,7 @@ if test "x$enable_extended_tests" = "xyes"; then
 		AC_MSG_ERROR([extended tests require tests support, please --enable-tests])
 	])
 	AC_DEFINE(HAVE_GTX, 1, [Define to 1 if we have GLib Test Extensions (libgtx from lp:gtx)])
-	
+
 	PKG_CHECK_MODULES(GTX, [ gtx >= 0.2.2 ])
 	AC_SUBST(GTX_CFLAGS)
 	AC_SUBST(GTX_LIBS)
@@ -225,8 +225,8 @@ AM_CONDITIONAL(HAVE_ICU, test "x$enable_icu" = "xyes")
 dnl ===========================================================================
 AC_OUTPUT([
   Makefile
-  build/Makefile
-  build/autotools/Makefile
+  m4/Makefile
+  m4/autotools/Makefile
   src/Makefile
   bindings/Makefile
   bindings/python/Makefile
@@ -238,7 +238,7 @@ AC_OUTPUT([
   tools/Makefile
   examples/Makefile
   vapi/Makefile
-]) 
+])
 
 dnl Output the results
 AC_MSG_NOTICE([

@@ -1,4 +1,4 @@
-ACLOCAL_AMFLAGS = -I build/autotools
+ACLOCAL_AMFLAGS = -I m4/autotools
 
 include $(top_srcdir)/Makefile.am.coverage
 

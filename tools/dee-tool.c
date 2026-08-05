@@ -204,7 +204,7 @@ _peer_lost_cb (DeePeer *p, const gchar *name)
 
 static gboolean timed_out = FALSE;
 static gboolean
-_timeout_cb ()
+_timeout_cb (gpointer user_data G_GNUC_UNUSED)
 {
   timed_out = TRUE;
   return FALSE;
